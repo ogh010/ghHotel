@@ -1,4 +1,4 @@
-package controller;
+package controller.resv;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +12,7 @@ public class MainServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         System.out.println("서블릿(컨트롤러) - doGet - 메인");
-//        req.getRequestDispatcher("/view/user/main.jsp").forward(req,res);
+        req.getRequestDispatcher("/view/rsv/main.jsp").forward(req,res);
     }
 
     @Override
