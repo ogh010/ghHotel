@@ -1,0 +1,47 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: fzaca
+  Date: 2025-06-04
+  Time: 오전 1:36
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+    <style>
+      ol{display: flex}
+      li{margin-right: 20px;}
+    </style>
+</head>
+<body>
+<h2>예약 스텝 2: 객실 선택</h2>
+<ol>
+  <li>호텔 및 일정 선택 </li>
+  <li style="color: green">객실 선택 </li>
+  <li>옵션</li>
+  <li>예약정보 입력</li>
+</ol>
+<div>
+  <form action="rsvStep2" method="get">
+    <p>🛏️객실을 선택하세요🛏️</p>
+    <input id="r1" type="radio" name="roomType" value="1">
+    <label for="r1">싱글룸 👤</label>
+    <br>
+    <input id="r2" type="radio" name="roomType" value="2">
+    <label for="r2">더블룸 🫂</label>
+    <br>
+    <input id="r3" type="radio" name="roomType" value="3">
+    <label for="r3">트윈룸 👥</label>
+    <br>
+    <input id="r4" type="radio" name="roomType" value="4">
+    <label for="r4">스튜디오룸 🎥</label>
+    <br>
+    <input id="r5" type="radio" name="roomType" value="5">
+    <label for="r5">헐리우드룸 🎞️</label>
+    <br>
+    <button type="submit">확인 (다음 단계) →</button>
+  </form>
+</div>
+</body>
+</html>
