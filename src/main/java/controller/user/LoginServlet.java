@@ -1,4 +1,4 @@
-package controller;
+package controller.user;
 
 
 import model.UserVO;
@@ -41,8 +41,8 @@ public class LoginServlet extends HttpServlet {
         if(loginUser != null){
             req.getSession().setAttribute("loginUser",loginUser); // 로그인 성공시 세션 저장
             System.out.println("로그인 성공");
-//            res.sendRedirect("/ghHotel2/main"); // 메인페이지로 리다이렉트
-            res.sendRedirect(req.getContextPath() + "/view/user/main.jsp"); // ✅ main.jsp로 이동
+            res.sendRedirect("/ghHotel2/main"); // 메인페이지로 리다이렉트
+//            res.sendRedirect(req.getContextPath() + "/view/user/main.jsp"); // ✅ main.jsp로 이동
         } else{
             System.out.println("로그인 실패");
             req.getRequestDispatcher("/view/user/login.jsp").forward(req,res);
