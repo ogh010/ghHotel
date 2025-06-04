@@ -23,7 +23,17 @@
   <li>예약정보 입력</li>
 </ol>
 <div>
+<%--  hotelId=1&checkIn=2025-06-04&checkOut=2025-06-05--%>
+  <p style="color: gray">📝사용자 정보📝</p>
+  <p style="color: gray">호텔ID : ${hotelId}</p>
+  <p style="color: gray">체크인 : ${checkIn}</p>
+  <p style="color: gray">체크아웃 : ${checkOut}</p>
+</div>
+<div>
   <form action="rsvStep2" method="get">
+    <input type="hidden" name="hotelId" value="${hotelId}">
+    <input type="hidden" name="checkIn" value="${checkIn}">
+    <input type="hidden" name="checkOut" value="${checkOut}">
     <p>🛏️객실을 선택하세요🛏️</p>
     <input id="r1" type="radio" name="roomType" value="1">
     <label for="r1">싱글룸 👤</label>
