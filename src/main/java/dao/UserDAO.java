@@ -1,6 +1,6 @@
 package dao;
 
-import model.UserVO;
+import model.user.UserVO;
 import util.DBUtil;
 
 import java.sql.Connection;

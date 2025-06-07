@@ -1,6 +1,7 @@
-package service;
+package service.user;
 
-import model.UserVO;
+
+import model.user.UserVO;
 
 public interface UserService {
 

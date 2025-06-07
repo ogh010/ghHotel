@@ -1,9 +1,9 @@
 package controller.user;
 
 
-import model.UserVO;
-import service.UserService;
-import service.UserServiceImpl;
+import model.user.UserVO;
+import service.user.UserService;
+import service.user.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

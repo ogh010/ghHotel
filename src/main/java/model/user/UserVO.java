@@ -1,7 +1,8 @@
-package model;
+package model.user;
 
 import lombok.Data;
-import java.sql.Date;
+
+import java.util.Date;
 
 // 회원 정보를 담는 vo 클래스 (Value Object)
 @Data
