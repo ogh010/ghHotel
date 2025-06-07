@@ -1,4 +1,4 @@
-package dao;
+package dao.user;
 
 import model.user.UserVO;
 import util.DBUtil;

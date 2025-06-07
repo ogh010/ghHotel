@@ -1,6 +1,6 @@
 package service.user;
 
-import dao.UserDAO;
+import dao.user.UserDAO;
 import model.user.UserVO;
 
 public class UserServiceImpl implements UserService{

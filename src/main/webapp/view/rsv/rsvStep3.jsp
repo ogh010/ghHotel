@@ -25,16 +25,22 @@
 <div>
   <%--  hotelId=1&checkIn=2025-06-04&checkOut=2025-06-05--%>
   <p style="color: gray">📝사용자 정보📝</p>
-  <p style="color: gray">호텔ID : ${param.hotelId}</p>
-  <p style="color: gray">체크인 : ${param.checkIn}</p>
-  <p style="color: gray">체크아웃 : ${param.checkOut}</p>
-  <p style="color: gray">객실선택 : ${roomType}</p>
+    <p style="color: gray">호텔ID : ${param.hotelId}</p>
+    <p style="color: gray">체크인 : ${param.checkIn}</p>
+    <p style="color: gray">체크아웃 : ${param.checkOut}</p>
+    <p style="color: gray">어른 수  : ${param.adultCount}</p>
+    <p style="color: gray">아이 수 : ${param.childCount}</p>
+    <p style="color: gray">총 금액 : ${totalAmount}</p>
+    <p style="color: gray">객실선택 : ${roomType}</p>
 </div>
 <form action="rsvStep3" method="get">
   <input type="hidden" name="hotelId" value="${param.hotelId}">
   <input type="hidden" name="checkIn" value="${param.checkIn}">
   <input type="hidden" name="checkOut" value="${param.checkOut}">
-  <input type="hidden" name="roomType" value="${param.roomType}">
+  <input type="hidden" name="adultCount" value="${param.adultCount}">
+  <input type="hidden" name="childCount" value="${param.childCount}">
+  <input type="hidden" name="totalAmount" value="${totalAmount}">
+  <input type="hidden" name="roomType" value="${roomType}">
   <p>옵션을 선택해주세요 </p>
   <p>🛠️ 추가 옵션을 선택하세요 (선택사항)</p>
   <label>

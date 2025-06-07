@@ -13,11 +13,19 @@ public class ReserveStep3Servelt extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         System.out.println("서블릿(컨트롤러) - doGet - rsvStep3");
 
-        String[] options = req.getParameterValues("option"); // 여러개 선택
-        String joinedOptions = String.join(",",options);
+        String option = req.getParameter("option");
+        int price = 0;
 
-        req.setAttribute("joinedOptions", joinedOptions);
+        switch (option){
+            case "upgrade" : price = 30000; break;
+            case "breakfast" : price = 15000; break;
+            case "shuttle" : price = 20000; break;
+            case "lateCheckout" : price = 10000; break;
+            case "wine" : price = 25000; break;
+        }
 
+        req.setAttribute("option", option);
+        req.setAttribute("totalAmount", Integer.parseInt(req.getParameter("totalAmount"))+price);
         req.getRequestDispatcher("/view/rsv/rsvStep4.jsp").forward(req, res);
 
     }

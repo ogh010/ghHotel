@@ -25,18 +25,25 @@
 <div>
   <%--  hotelId=1&checkIn=2025-06-04&checkOut=2025-06-05--%>
   <p style="color: gray">📝사용자 정보📝</p>
-  <p style="color: gray">호텔ID : ${param.hotelId}</p>
-  <p style="color: gray">체크인 : ${param.checkIn}</p>
-  <p style="color: gray">체크아웃 : ${param.checkOut}</p>
-  <p style="color: gray">객실선택 : ${param.roomType}</p>
-  <p style="color: gray">추가옵션 : ${param}</p><br>
+    <p style="color: gray">호텔ID : ${param.hotelId}</p>
+    <p style="color: gray">체크인 : ${param.checkIn}</p>
+    <p style="color: gray">체크아웃 : ${param.checkOut}</p>
+    <p style="color: gray">어른 수  : ${param.adultCount}</p>
+    <p style="color: gray">아이 수 : ${param.childCount}</p>
+    <p style="color: gray">총 금액 : ${totalAmount}</p>
+    <p style="color: gray">객실선택 : ${param.roomType}</p>
+  <p style="color: gray">추가옵션 : ${option}</p><br>
 
 </div>
 <form action="reserveSubmit" method="post">
   <input type="hidden" name="hotelId" value="${param.hotelId}">
   <input type="hidden" name="checkIn" value="${param.checkIn}">
   <input type="hidden" name="checkOut" value="${param.checkOut}">
+  <input type="hidden" name="adultCount" value="${param.adultCount}">
+  <input type="hidden" name="childCount" value="${param.childCount}">
   <input type="hidden" name="roomType" value="${param.roomType}">
+  <input type="hidden" name="totalAmount" value="${totalAmount}">
+  <input type="hidden" name="option" value="${option}">
   <p>👇예약자 정보를 입력해주세요👇</p><br>
   ✒️예약자 정보 <input type="text" name="reserverName"><br>
   ✒️요청사항 <textarea name="reqDetail" id="reqDetail" cols="30" rows="10"></textarea><br>

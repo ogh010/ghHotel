@@ -35,12 +35,12 @@
     <div>
         👨‍👩 인원 선택:<br>
         성인 :
-        <input type="number" >
+        <input type="number" name="adultCount">
 <%--        <button type="button" class="minus">-</button>--%>
 <%--        <span class="counter" id="adultCount">1</span>--%>
 <%--        <button type="button" class="plus">+</button>--%>
         어린이 :
-        <input type="number" >
+        <input type="number" name="childCount">
 <%--        <button type="button" class="minusChild">-</button>--%>
 <%--        <span class="counter" id="childCount">1</span>--%>
 <%--        <button type="button" class="plusChild">+</button>--%>
