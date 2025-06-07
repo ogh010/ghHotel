@@ -15,7 +15,7 @@
   </style>
 </head>
 <body>
-<h2>예약 스텝 2: 객실 선택</h2>
+<h2>예약 스텝 3: 옵션 선택</h2>
 <ol>
   <li>호텔 및 일정 선택 </li>
   <li>객실 선택 </li>
@@ -31,8 +31,29 @@
   <p style="color: gray">객실선택 : ${roomType}</p>
 </div>
 <form action="rsvStep3" method="get">
+  <input type="hidden" name="hotelId" value="${param.hotelId}">
+  <input type="hidden" name="checkIn" value="${param.checkIn}">
+  <input type="hidden" name="checkOut" value="${param.checkOut}">
+  <input type="hidden" name="roomType" value="${param.roomType}">
   <p>옵션을 선택해주세요 </p>
+  <p>🛠️ 추가 옵션을 선택하세요 (선택사항)</p>
+  <label>
+    <input type="checkbox" name="option" value="upgrade"> 🔼 룸 업그레이드 (+30,000원)
+  </label><br>
+  <label>
+    <input type="checkbox" name="option" value="breakfast"> 🍳 조식 포함 (+15,000원)
+  </label><br>
+  <label>
+    <input type="checkbox" name="option" value="shuttle"> 🚌 공항 셔틀 (+20,000원)
+  </label><br>
+  <label>
+    <input type="checkbox" name="option" value="lateCheckout"> 🕓 레이트 체크아웃 (+10,000원)
+  </label><br>
+  <label>
+    <input type="checkbox" name="option" value="wine"> 🍷 와인 세트 제공 (+25,000원)
+  </label><br><br>
 
+  <button type="submit">다음 단계 → 예약자 정보 입력</button>
 </form>
 </body>
 </html>
